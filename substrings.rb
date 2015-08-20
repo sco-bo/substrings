@@ -8,8 +8,7 @@ def substrings (string, array)
 			hash.store(word, string.scan(word).length)
 		end
 	}
-	puts hash
+	hash
 end
 
-
-p substrings("downtown", dictionary)
+puts substrings("Howdy partner, sit down! How's it going?", dictionary)
