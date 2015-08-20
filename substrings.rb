@@ -3,12 +3,13 @@ dictionary = ["below","down","go","going","horn","how","howdy","it",
 
 def substrings (string, array)
 	hash = {}
-	array.any? {|word| check = string.include? (word)
-		if check == true
-			puts hash[word] =  word
+	array.each {|word| 
+		if string.include? (word)	
+			hash.store(word, string.scan(word).length)
 		end
 	}
-	
+	puts hash
 end
 
-puts substrings("downtown", dictionary)
+
+p substrings("downtown", dictionary)
